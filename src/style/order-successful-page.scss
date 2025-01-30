@@ -1,0 +1,66 @@
+@import "./vars";
+@import "./templates";
+@import "./header";
+@import "./aside-newsletter";
+@import "./footer";
+
+.order-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  min-height: 330px;
+  margin: auto;
+  width: 90%;
+  @media (max-width: $tablet) {
+    padding: 30px 5%;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 87px;
+    margin: auto;
+    @media (max-width: $mobile) {
+      gap: 15px;
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    @include button-style;
+  }
+
+  &__title {
+    position: relative;
+    @include logo-style;
+    text-align: center;
+  }
+
+  &__text {
+    @include subtitle-style;
+    text-align: center;
+  }
+}
+
+.back-link {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+  @media (max-width: $tablet) {
+    padding: 30px 5%;
+  }
+  @include logo-style;
+  & {
+    font-size: 24px;
+    text-decoration: none;
+  }
+  @media (max-width: $tablet) {
+    font-size: 20px;
+  }
+}

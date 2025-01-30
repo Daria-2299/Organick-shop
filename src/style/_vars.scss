@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+
+$font-family: "Roboto", sans-serif;
+$second-family: "Open Sans", sans-serif;
+$third-family: "Yellowtail", sans-serif;
+
+$dark-color: #274c5b;
+$subtitle-color: #7eb693;
+$text-color: #525c60;
+$accent-color: #efd372;
+$white-color: #ffffff;
+$border-color: #e0e0e0;
+$bg-light-color: #f9f8f8;
+$bg-light-grey: #fafafa;
+$bg-light-accent: #eff6f1;
+$light-grey: #f1f1f1;
+$dark-grey: #b8b8b8;
+$error-color: #ff0000;
+
+$desktop: 1440px;
+$desktop-md: 1200px;
+$tablet: 1024px;
+$mobile: 767px;
+$mobile-sm: 500px;

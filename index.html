@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/style.scss" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-container__icon-container">
+          <img
+            class="logo-container__icon"
+            src="./src/images/logo.svg"
+            alt="logo"
+          />
+        </div>
+        <p class="logo-container__name">Organick</p>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a class="navigation__link" href="./main.html">Home </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./pages/about.html">About </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./pages/shop.html">Shop </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__link navigation__link--cart"
+              href="./pages/cart-page.html"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="cart total-quantity" href="./pages/cart-page.html">0</a>
+      <div class="burger-menu">
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+      </div>
+    </header>
+    <main class="main">
+      <article class="basis">
+        <section class="basis__content">
+          <p class="basis__subtitle">100% Natural Food</p>
+          <h1 class="basis__title">Choose the best healthier way of life</h1>
+        </section>
+        <div class="basis__photo"></div>
+      </article>
+      <section class="cards">
+        <div class="cards__item cards__item--first">
+          <p class="cards__subtitle">Natural!!</p>
+          <h2 class="cards__title">Get Garden Fresh Fruits</h2>
+        </div>
+        <div class="cards__item cards__item--second">
+          <p class="cards__subtitle">Offer!!</p>
+          <h2 class="cards__title">Get 10% off on Vegetables</h2>
+        </div>
+      </section>
+      <article class="about">
+        <div class="about__photo"></div>
+        <section class="about__content">
+          <p class="about__subtitle">About Us</p>
+          <h2 class="about__title">
+            We Believe in Working <br />
+            Accredited Farmers
+          </h2>
+          <p class="about__description">
+            Simply dummy text of the printing and typesetting industry. Lorem
+            had ceased to been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley.
+          </p>
+          <div class="about-cards">
+            <div class="about-cards__item">
+              <div class="about-cards__icon">
+                <img
+                  src="./src/images/main/plate-icon.svg"
+                  alt="plate with wood leaf"
+                />
+              </div>
+              <div>
+                <h3 class="about-cards__title">Organic Foods Only</h3>
+                <p class="about-cards__description">
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum
+                </p>
+              </div>
+            </div>
+            <div class="about-cards__item">
+              <div class="about-cards__icon">
+                <img
+                  src="./src/images/main/mailbox-icon.svg"
+                  alt="mailbox icon"
+                />
+              </div>
+              <div>
+                <h3 class="about-cards__title">Quality Standards</h3>
+                <p class="about-cards__description">
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum
+                </p>
+              </div>
+            </div>
+          </div>
+          <a class="about__button" href="./pages/about.html">Read More</a>
+        </section>
+      </article>
+      <article class="products">
+        <p class="products__subtitle">Categories</p>
+        <h2 class="products__title">Our Products</h2>
+        <section class="slider">
+          <button class="slider__button slider__button--prev"></button>
+          <div class="slider__cards"></div>
+          <button class="slider__button slider__button--next"></button>
+        </section>
+        <a class="products__button" href="./pages/shop.html">Shop Now</a>
+      </article>
+      <article class="testimonial">
+        <p class="testimonial__subtitle">Testimonial</p>
+        <h2 class="testimonial__title">What Our Customer Saying?</h2>
+        <section class="testimonial-carousel">
+          <div class="testimonial-carousel__item">
+            <div class="testimonial-carousel__photo">
+              <img
+                src="./src/images/main/client-icon.png"
+                alt="client's photo"
+              />
+            </div>
+            <p class="testimonial-carousel__text">
+              Simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been.
+            </p>
+            <h3 class="testimonial-carousel__name">Sara Taylor</h3>
+            <p class="testimonial-carousel__subtitle">Consumer</p>
+          </div>
+        </section>
+        <section class="testimonial-achievements">
+          <div class="testimonial-achievements__item">
+            <h3 class="testimonial-achievements__title">100%</h3>
+            <p class="testimonial-achievements__subtitle">Organic</p>
+          </div>
+          <div class="testimonial-achievements__item">
+            <h3 class="testimonial-achievements__title">285</h3>
+            <p class="testimonial-achievements__subtitle">Active Product</p>
+          </div>
+          <div class="testimonial-achievements__item">
+            <h3 class="testimonial-achievements__title">350+</h3>
+            <p class="testimonial-achievements__subtitle">Organic Orchads</p>
+          </div>
+          <div class="testimonial-achievements__item">
+            <h3 class="testimonial-achievements__title">25+</h3>
+            <p class="testimonial-achievements__subtitle">Years of Farming</p>
+          </div>
+        </section>
+      </article>
+      <article class="eco-friendly">
+        <div class="eco-friendly__photo"></div>
+        <section class="eco-friendly__content">
+          <p class="eco-friendly__subtitle">Eco Friendly</p>
+          <h2 class="eco-friendly__title">
+            Econis is a Friendly Organic Store
+          </h2>
+          <h3 class="eco-friendly__topic">Start with Our Company First</h3>
+          <p class="eco-friendly__text">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptat
+            accusantium doloremque laudantium. Sed ut perspiciatis.
+          </p>
+          <h3 class="eco-friendly__topic">Learn How to Grow Yourself</h3>
+          <p class="eco-friendly__text">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptat
+            accusantium doloremque laudantium. Sed ut perspiciatis.
+          </p>
+          <h3 class="eco-friendly__topic">Farming Strategies of Today</h3>
+          <p class="eco-friendly__text">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptat
+            accusantium doloremque laudantium. Sed ut perspiciatis.
+          </p>
+        </section>
+      </article>
+    </main>
+    <aside class="newsletter">
+      <h2 class="newsletter__title">Subscribe to our Newsletter</h2>
+      <form class="newsletter__form" name="subscribeForm">
+        <div>
+          <input
+            class="newsletter__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <span class="helper helper--email-subscribe"> </span>
+        </div>
+        <button class="newsletter__button" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter__successful-message">
+        You have subscribed to our newsletters.
+      </p>
+    </aside>
+    <footer class="footer">
+      <div class="footer__content footer__content--contacts">
+        <h2 class="footer__title">Contact Us</h2>
+        <h3 class="footer__contact-type">Email</h3>
+        <p class="footer__contact-info">needhelp@Organia.com</p>
+        <h3 class="footer__contact-type">Phone</h3>
+        <p class="footer__contact-info">666 888 888</p>
+        <h3 class="footer__contact-type">Address</h3>
+        <p class="footer__contact-info">88 road, borklyn street, USA</p>
+      </div>
+      <div class="footer__content">
+        <div class="logo-container">
+          <div class="logo-container__icon-container">
+            <img
+              class="logo-container__icon"
+              src="./src/images/logo.svg"
+              alt="logo"
+            />
+          </div>
+          <p class="logo-container__name">Organick</p>
+        </div>
+        <p class="footer__text">
+          Simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum simply dummy text of the printing
+        </p>
+        <div class="footer__links">
+          <a
+            class="footer__link-item"
+            href="https://www.instagram.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="./src/images/insta.svg"
+              alt="instagram-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://www.facebook.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="./src/images/facebook.svg"
+              alt="facebook-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://twitter.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="./src/images/twitter.svg"
+              alt="twitter-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://ru.pinterest.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="./src/images/pintrest.svg"
+              alt="pintrest-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./src/app/subscribe-form.js"></script>
+    <script type="module" src="./src/app/common.js"></script>
+  </body>
+</html>

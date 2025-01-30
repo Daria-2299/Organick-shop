@@ -1,0 +1,129 @@
+@import "./vars";
+@import "./templates";
+@import "./header";
+@import "./aside-newsletter";
+@import "./footer";
+
+.order {
+  margin: auto;
+  width: 90%;
+  @media (max-width: $tablet) {
+    padding: 30px 5%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @include title-style;
+    & {
+      font-weight: 500;
+    }
+  }
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  @media (max-width: $tablet) {
+    gap: 20px;
+  }
+
+  &__block {
+    border: none;
+  }
+
+  &__data-container {
+    display: flex;
+    gap: 100px;
+    @media (max-width: $tablet) {
+      gap: 50px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__data-container-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    @include logo-style;
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    @include caption-style;
+    & {
+      color: $subtitle-color;
+    }
+    & {
+      outline: none;
+      border: none;
+      border-bottom: 0.5px solid $text-color;
+    }
+    @include cursor-pointer;
+
+    &--comment {
+      padding: 12px 8px;
+      min-height: 90px;
+      border-bottom: none;
+      box-shadow: 0 4px 10px 0 $light-grey;
+      resize: none;
+    }
+  }
+
+  &__label {
+    @include caption-style;
+    & {
+      color: $subtitle-color;
+    }
+  }
+  &__agreement {
+    @include caption-style;
+    & {
+      color: $subtitle-color;
+    }
+  }
+
+  &__radiobutton {
+    @include cursor-pointer;
+  }
+
+  &__button {
+    @include button-style;
+    & {
+      color: $white-color;
+      background-color: $dark-color;
+    }
+  }
+
+  &__datalist {
+    width: fit-content;
+  }
+}
+
+.helper {
+  display: none;
+  margin-top: -20px;
+  @include text-description-style;
+  width: 100%;
+  & {
+    color: $error-color;
+    background-color: transparent;
+  }
+  &--delivery-type,
+  &--pay-type {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style/order.scss" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-container__icon-container">
+          <img
+            class="logo-container__icon"
+            src="../src/images/logo.svg"
+            alt="logo"
+          />
+        </div>
+        <p class="logo-container__name">Organick</p>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a class="navigation__link" href="../index.html">Home </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./about.html">About </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./shop.html">Shop </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__link navigation__link--cart"
+              href="./cart-page.html"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="cart total-quantity" href="./cart-page.html">0</a>
+      <div class="burger-menu">
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+      </div>
+    </header>
+    <main>
+      <article class="order">
+        <h1 class="order__title">Ordering</h1>
+        <form name="formOrder" class="order-form">
+          <fieldset class="order-form__block">
+            <legend class="order-form__title">Your details</legend>
+            <div class="order-form__data-container">
+              <div class="order-form__data-container-item">
+                <input
+                  class="order-form__input"
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  placeholder="Surname"
+                />
+                <span class="helper helper--surname"> </span>
+                <input
+                  class="order-form__input"
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Name"
+                />
+                <span class="helper helper--username"> </span>
+                <input
+                  class="order-form__input"
+                  type="text"
+                  name="patronymic"
+                  id="patronymic"
+                  placeholder="Middle name"
+                />
+                <span class="helper helper--patronymic"> </span>
+                <input
+                  class="order-form__input"
+                  type="tel"
+                  name="telephone"
+                  id="telephone"
+                  placeholder="Phone number"
+                  maxlength="13"
+                />
+                <span class="helper helper--telephone"> </span>
+                <label class="order-form__agreement order-form__radiobutton">
+                  <input
+                    class="order-form__input"
+                    type="radio"
+                    name="agreement"
+                    id="agreement"
+                  />
+                  I agree to the processing of personal data.
+                </label>
+                <span class="helper helper--agreement">
+                  To continue, you must consent to the processing of personal
+                  data.
+                </span>
+              </div>
+              <div class="order-form__data-container-item">
+                <input
+                  class="order-form__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email address"
+                />
+                <span class="helper helper--email"> </span>
+                <input
+                  class="order-form__input order-form__input--address"
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Your address in Ufa (г Уфа, ...)"
+                  list="suggested-addresses"
+                />
+                <datalist class="order-form__datalist" id="suggested-addresses">
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </datalist>
+                <span class="helper helper--address"> </span>
+                <textarea
+                  class="order-form__input order-form__input--comment"
+                  name="comment"
+                  id="comment"
+                  placeholder="Comment"
+                >
+                </textarea>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="order-form__block">
+            <p class="order-form__title">Select delivery method</p>
+            <div
+              class="order-form__data-container order-form__data-container--delivery-type"
+            >
+              <label
+                class="order-form__label order-form__delivery order-form__radiobutton"
+              >
+                <input
+                  type="radio"
+                  name="delivery-type"
+                  id="courier"
+                  value="courier"
+                />
+                Personal delivery
+              </label>
+              <label
+                class="order-form__label order-form__delivery order-form__radiobutton"
+              >
+                <input
+                  type="radio"
+                  name="delivery-type"
+                  id="pickup"
+                  value="pickup"
+                />
+                Pickup from the store
+              </label>
+            </div>
+            <span class="helper helper--delivery-type">
+              Select a delivery method
+            </span>
+          </fieldset>
+          <fieldset class="order-form__block">
+            <p class="order-form__title">Select payment method</p>
+            <div
+              class="order-form__data-container order-form__data-container--pay-type"
+            >
+              <label class="order-form__label order-form__radiobutton">
+                <input
+                  type="radio"
+                  name="pay-type"
+                  id="bank-card"
+                  value="bank-card"
+                />
+                Bank card
+              </label>
+              <label class="order-form__label order-form__radiobutton">
+                <input type="radio" name="pay-type" id="cash" value="cash" />
+                Cash
+              </label>
+            </div>
+            <span class="helper helper--pay-type">Select payment method</span>
+          </fieldset>
+          <button class="order-form__button button-confirm" type="submit">
+            Confirm
+          </button>
+        </form>
+      </article>
+    </main>
+    <aside class="newsletter">
+      <h2 class="newsletter__title">Subscribe to our Newsletter</h2>
+      <form class="newsletter__form" name="subscribeForm">
+        <div>
+          <input
+            class="newsletter__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <span class="helper helper--email-subscribe"> </span>
+        </div>
+        <button class="newsletter__button" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter__successful-message">
+        You have subscribed to our newsletters.
+      </p>
+    </aside>
+    <footer class="footer">
+      <div class="footer__content footer__content--contacts">
+        <h2 class="footer__title">Contact Us</h2>
+        <h3 class="footer__contact-type">Email</h3>
+        <p class="footer__contact-info">needhelp@Organia.com</p>
+        <h3 class="footer__contact-type">Phone</h3>
+        <p class="footer__contact-info">666 888 888</p>
+        <h3 class="footer__contact-type">Address</h3>
+        <p class="footer__contact-info">88 road, borklyn street, USA</p>
+      </div>
+      <div class="footer__content">
+        <div class="logo-container">
+          <div class="logo-container__icon-container">
+            <img
+              class="logo-container__icon"
+              src="../src/images/logo.svg"
+              alt="logo"
+            />
+          </div>
+          <p class="logo-container__name">Organick</p>
+        </div>
+        <p class="footer__text">
+          Simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum simply dummy text of the printing
+        </p>
+        <div class="footer__links">
+          <a
+            class="footer__link-item"
+            href="https://www.instagram.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/insta.svg"
+              alt="instagram-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://www.facebook.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/facebook.svg"
+              alt="facebook-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://twitter.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/twitter.svg"
+              alt="twitter-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://ru.pinterest.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/pintrest.svg"
+              alt="pintrest-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../src/app/subscribe-form.js"></script>
+    <script type="module" src="../src/app/common.js"></script>
+    <script type="module" src="../src/app/order.js"></script>
+  </body>
+</html>

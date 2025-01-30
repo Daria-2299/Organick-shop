@@ -1,0 +1,105 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Calabrese Broccoli",
+      "category": "Vegetable",
+      "price": 20,
+      "sale-price": 13,
+      "photo": "broccoli-product.png"
+    },
+    {
+      "id": "2",
+      "name": "Fresh Banana Fruites",
+      "category": "Fresh",
+      "price": 20,
+      "sale-price": 14,
+      "photo": "banana-product.png"
+    },
+    {
+      "id": "3",
+      "name": "White Nuts",
+      "category": "Millets",
+      "price": 20,
+      "sale-price": 15,
+      "photo": "nuts-product.png"
+    },
+    {
+      "id": "4",
+      "name": "Vegan Red Tomato",
+      "category": "Vegetable",
+      "price": 20,
+      "sale-price": 17,
+      "photo": "tomato-product.png"
+    },
+    {
+      "id": "5",
+      "name": "Mung Bean",
+      "category": "Health",
+      "price": 20,
+      "sale-price": 11,
+      "photo": "bean-product.png"
+    },
+    {
+      "id": "6",
+      "name": "Brown Hazelnut",
+      "category": "Nuts",
+      "price": 20,
+      "sale-price": 12,
+      "photo": "hazelnut-product.png"
+    },
+    {
+      "id": "7",
+      "name": "Eggs",
+      "category": "Fresh",
+      "price": 20,
+      "sale-price": 17,
+      "photo": "egges-product.png"
+    },
+    {
+      "id": "8",
+      "name": "Zelco Suji Elaichi Rusk",
+      "category": "Fresh",
+      "price": 20,
+      "sale-price": 15,
+      "photo": "bread-product.png"
+    },
+    {
+      "id": "9",
+      "name": "Mung Bean",
+      "category": "Health",
+      "price": 20,
+      "sale-price": 11,
+      "photo": "mung-bean.png"
+    },
+    {
+      "id": "10",
+      "name": "White Hazelnut",
+      "category": "Nuts",
+      "price": 20,
+      "sale-price": 12,
+      "photo": "white-hazelnut.png"
+    },
+    {
+      "id": "11",
+      "name": "Fresh Corn",
+      "category": "Fresh",
+      "price": 20,
+      "sale-price": 17,
+      "photo": "fresh-corn.png"
+    },
+    {
+      "id": "12",
+      "name": "Organic Almonds",
+      "category": "Fresh",
+      "price": 20,
+      "sale-price": 15,
+      "photo": "organic-almonds.png"
+    }
+  ],
+  "cart": [],
+  "email-subscription": [
+  ],
+  "orders": [
+  ]
+}

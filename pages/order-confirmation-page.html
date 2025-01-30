@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/style/order-confirmation-page.scss" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-container__icon-container">
+          <img
+            class="logo-container__icon"
+            src="../src/images/logo.svg"
+            alt="logo"
+          />
+        </div>
+        <p class="logo-container__name">Organick</p>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a class="navigation__link" href="../index.html">Home </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./about.html">About </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./shop.html">Shop </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              class="navigation__link navigation__link--cart"
+              href="./cart-page.html"
+            >
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a class="cart total-quantity" href="./cart-page.html">0</a>
+      <div class="burger-menu">
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+      </div>
+    </header>
+    <main>
+      <article class="confirmation">
+        <h2 class="confirmation__title">Order confirmation</h2>
+        <p class="confirmation__information">
+          Surname:
+          <span class="confirmation__value confirmation__value--surname"></span>
+        </p>
+        <p class="confirmation__information">
+          Name:
+          <span class="confirmation__value confirmation__value--username">
+          </span>
+        </p>
+        <p class="confirmation__information">
+          Middle name:
+          <span
+            class="confirmation__value confirmation__value--patronymic"
+          ></span>
+        </p>
+        <p class="confirmation__information">
+          Phone number:
+          <span class="confirmation__value confirmation__value--telephone">
+          </span>
+        </p>
+        <p class="confirmation__information">
+          Email address:
+          <span class="confirmation__value confirmation__value--email"></span>
+        </p>
+        <p class="confirmation__information">
+          Payment method:
+          <span class="confirmation__value confirmation__value--pay-type">
+          </span>
+        </p>
+        <p class="confirmation__information">
+          Delivery method:
+          <span class="confirmation__value confirmation__value--delivery-type">
+          </span>
+        </p>
+        <p class="confirmation__information">
+          Addredd:
+          <span class="confirmation__value confirmation__value--address"></span>
+        </p>
+        <button class="confirmation__button" type="submit">
+          Make an order
+        </button>
+      </article>
+    </main>
+    <aside class="newsletter">
+      <h2 class="newsletter__title">Subscribe to our Newsletter</h2>
+      <form class="newsletter__form" name="subscribeForm">
+        <div>
+          <input
+            class="newsletter__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <span class="helper helper--email-subscribe"> </span>
+        </div>
+        <button class="newsletter__button" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter__successful-message">
+        You have subscribed to our newsletters.
+      </p>
+    </aside>
+    <footer class="footer">
+      <div class="footer__content footer__content--contacts">
+        <h2 class="footer__title">Contact Us</h2>
+        <h3 class="footer__contact-type">Email</h3>
+        <p class="footer__contact-info">needhelp@Organia.com</p>
+        <h3 class="footer__contact-type">Phone</h3>
+        <p class="footer__contact-info">666 888 888</p>
+        <h3 class="footer__contact-type">Address</h3>
+        <p class="footer__contact-info">88 road, borklyn street, USA</p>
+      </div>
+      <div class="footer__content">
+        <div class="logo-container">
+          <div class="logo-container__icon-container">
+            <img
+              class="logo-container__icon"
+              src="../src/images/logo.svg"
+              alt="logo"
+            />
+          </div>
+          <p class="logo-container__name">Organick</p>
+        </div>
+        <p class="footer__text">
+          Simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum simply dummy text of the printing
+        </p>
+        <div class="footer__links">
+          <a
+            class="footer__link-item"
+            href="https://www.instagram.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/insta.svg"
+              alt="instagram-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://www.facebook.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/facebook.svg"
+              alt="facebook-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://twitter.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/twitter.svg"
+              alt="twitter-icon"
+            />
+          </a>
+          <a
+            class="footer__link-item"
+            href="https://ru.pinterest.com"
+            target="_blank"
+          >
+            <img
+              class="footer__icon"
+              src="../src/images/pintrest.svg"
+              alt="pintrest-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../src/app/subscribe-form.js"></script>
+    <script type="module" src="../src/app/common.js"></script>
+    <script type="module" src="../src/app/order-confirmation.js"></script>
+  </body>
+</html>

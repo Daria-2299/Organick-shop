@@ -1,0 +1,46 @@
+@import "./vars";
+@import "./templates";
+@import "./header";
+@import "./aside-newsletter";
+@import "./footer";
+@import "./product-card.scss";
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  @include background-photo-style;
+  background-image: url("../images/shop/banner-photo.png");
+  @media (max-width: $tablet) {
+    height: 350px;
+  }
+  @media (max-width: $mobile) {
+    height: 250px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    @extend %max-width-height;
+    @include background-photo-style;
+    background-image: url("../images/shop/background-banner.png");
+  }
+
+  &__title {
+    @include title-style;
+    & {
+      font-size: 70px;
+    }
+  }
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 100px auto;
+}

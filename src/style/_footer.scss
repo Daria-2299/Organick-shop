@@ -1,0 +1,94 @@
+.footer {
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  @media (max-width: $mobile) {
+    margin: 10px auto;
+    align-items: center;
+    .logo-container {
+      display: none;
+    }
+    &__text {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding: 30px 50px;
+    @media (max-width: $mobile) {
+      padding: 20px;
+    }
+
+    &--contacts {
+      width: 40%;
+      text-align: right;
+      border-right: 1px solid $border-color;
+      @media (max-width: $mobile) {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    @include basic-text-style;
+    & {
+      font-size: 30px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 28px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+
+  &__contact-type {
+    @include text-description-style;
+    & {
+      font-weight: 700;
+    }
+  }
+
+  &__contact-info {
+    margin-bottom: 15px;
+    @include text-description-style;
+  }
+
+  &__text {
+    max-width: 80%;
+    margin: 23px auto 50px;
+    text-align: center;
+    @include text-description-style;
+    @media (max-width: $mobile) {
+      margin: 20px auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/ellipse.svg");
+    border-radius: 100%;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

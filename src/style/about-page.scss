@@ -1,0 +1,409 @@
+@import "./vars";
+@import "./templates";
+@import "./header";
+@import "./aside-newsletter";
+@import "./footer";
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  @include background-photo-style;
+  background-image: url("../images/about/banner-photo.png");
+  @media (max-width: $tablet) {
+    height: 350px;
+  }
+  @media (max-width: $mobile) {
+    height: 250px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    @extend %max-width-height;
+    @include background-photo-style;
+    background-image: url("../images/about/background-banner.png");
+  }
+
+  &__title {
+    @include title-style;
+    font-size: 70px;
+  }
+}
+
+.about-info {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  width: 90%;
+  margin: 70px auto;
+  @media (max-width: $tablet) {
+    column-gap: 30px;
+    margin: 50px auto;
+  }
+  @media (max-width: $mobile) {
+    margin: 25px auto;
+  }
+
+  &__photo-container {
+    width: 50%;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__photo {
+    flex: 1 50%;
+    @extend %max-width-height;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1 50%;
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    @include subtitle-style;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    @include title-style;
+  }
+
+  &__description {
+    margin-bottom: 35px;
+    @include text-description-style;
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    @include button-style;
+    & {
+      color: $white-color;
+      background: $dark-color;
+    }
+  }
+}
+
+.about-cards {
+  display: flex;
+  column-gap: 65px;
+  margin-bottom: 50px;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: row;
+    column-gap: 35px;
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  &__title {
+    @include caption-style;
+  }
+}
+
+.advantages {
+  padding: 50px 5%;
+  background-color: $bg-light-color;
+  @media (max-width: $mobile) {
+    padding: 0 0 30px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    @media (max-width: $tablet) {
+      column-gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__info {
+    flex: 1 50%;
+    @media (max-width: $mobile) {
+      margin: 20px 5%;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    @include subtitle-style;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    @include title-style;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    @include text-description-style;
+    &--shift {
+      max-width: 440px;
+      padding-left: 60px;
+    }
+  }
+
+  &__advantage-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
+    margin-bottom: 12px;
+    width: 340px;
+    height: 80px;
+    @include basic-text-style;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #ececec;
+    border-radius: 50px;
+    @media (max-width: $tablet) {
+      width: 300px;
+      height: 70px;
+      font-size: 16px;
+    }
+    @media (max-width: $mobile) {
+      width: 250px;
+      height: 60px;
+      font-size: 12px;
+    }
+    &::before {
+      content: url("../images/about/marker.svg");
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  &__photo-container {
+    flex: 1 50%;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__photo {
+    @extend %max-width-height;
+    object-fit: cover;
+    border-radius: 30px;
+    @media (max-width: $mobile) {
+      height: 200px;
+      border-radius: 0;
+    }
+  }
+}
+
+.adv-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 90%;
+  margin: 40px auto;
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 25px auto;
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    margin: 15px auto;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 50px 30px;
+    background-color: $white-color;
+    border-radius: 30px;
+  }
+  &__icon {
+    width: 95px;
+    height: 95px;
+  }
+  &__title {
+    @include title-style;
+    & {
+      font-size: 25px;
+      text-align: center;
+    }
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+  &__description {
+    @include text-description-style;
+    & {
+      text-align: center;
+    }
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 70px auto;
+  @media (max-width: $tablet) {
+    margin: 50px auto;
+  }
+  @media (max-width: $mobile) {
+    margin: 25px auto;
+  }
+  &__subtitle {
+    @include subtitle-style;
+  }
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+    @include title-style;
+  }
+  &__description {
+    max-width: 650px;
+    margin-bottom: 40px;
+    text-align: center;
+    @include text-description-style;
+  }
+}
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  &__item {
+    position: relative;
+    background-color: $bg-light-color;
+    border-radius: 30px;
+    &:nth-child(2n) {
+      background-color: $white-color;
+      box-shadow: 0px 29px 44px 0px rgba(150, 150, 150, 0.25);
+    }
+  }
+  &__photo {
+    @extend %max-width-height;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+  }
+  &__info-container {
+    padding: 35px 30px;
+    @media (max-width: $tablet) {
+      padding: 25px 20px;
+    }
+  }
+  &__name {
+    margin-bottom: 10px;
+    @include title-style;
+    & {
+      font-size: 25px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+  &__job-title {
+    @include subtitle-style;
+    & {
+      font-size: 22px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+}
+
+.media-links {
+  position: absolute;
+  right: 30px;
+  bottom: 35px;
+  display: flex;
+  gap: 17px;
+  @media (max-width: $tablet) and (min-width: $mobile) {
+    position: static;
+    justify-content: flex-end;
+  }
+}
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 5%;
+  background-color: $dark-color;
+  &__subtitle {
+    margin-bottom: 8px;
+    @include subtitle-style;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include title-style;
+    & {
+      text-align: center;
+      color: $white-color;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__photo-container {
+    margin-bottom: 25px;
+    height: 300px;
+    background-color: $white-color;
+    border-radius: 30px;
+  }
+  &__photo {
+    margin: 0 auto;
+    @extend %max-width-height;
+    object-fit: contain;
+    border-radius: 30px;
+  }
+  &__cards-title {
+    @include caption-style;
+    & {
+      text-align: center;
+      color: $white-color;
+    }
+  }
+}

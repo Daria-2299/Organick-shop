@@ -1,0 +1,538 @@
+@import "./vars";
+@import "./templates";
+@import "./header";
+@import "./aside-newsletter";
+@import "./footer";
+@import "./product-card.scss";
+
+.basis {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  padding-left: 13%;
+  background-color: $bg-light-color;
+  @media (max-width: 1240px) {
+    padding-left: 7%;
+  }
+  @media (max-width: $mobile) {
+    justify-content: center;
+    height: 55vh;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    @extend %max-width-height;
+    @include background-photo-style;
+    background-image: url("../images/main/background.png");
+    @media (max-width: $mobile) {
+      background-size: contain;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    margin-right: 5%;
+    z-index: 1;
+    @media (max-width: $tablet) {
+      width: 60%;
+    }
+    @media (max-width: $mobile) {
+      width: 80%;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle-style;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    padding-top: 8px;
+    @include title-style;
+    & {
+      font-size: 70px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 50px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 40px;
+    }
+  }
+
+  &__photo {
+    width: 57%;
+    height: 100%;
+    @include background-photo-style;
+    background-color: $bg-light-color;
+    background-image: url("../images/main/start.png");
+    background-blend-mode: multiply;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 35px;
+  width: 90%;
+  margin: 100px auto;
+  @media (max-width: $tablet) {
+    width: 96%;
+    margin: 50px auto;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 25px;
+    margin: 25px auto;
+  }
+
+  &__item {
+    flex-grow: 1;
+    padding: 110px 55px;
+    @include background-photo-style;
+    border-radius: 30px;
+    @media (max-width: $tablet) {
+      padding: 55px 30px;
+    }
+
+    &--first {
+      color: $white-color;
+      background-image: url("../images/main/banana.jpg");
+      .cards__title,
+      .cards__subtitle {
+        color: $white-color;
+      }
+    }
+
+    &--second {
+      color: $subtitle-color;
+      background-image: url("../images/main/apricot.jpg");
+      .cards__title {
+        color: $dark-color;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 5px;
+    @include subtitle-style;
+  }
+
+  &__title {
+    max-width: 277px;
+    @include title-style;
+    & {
+      font-size: 40px;
+    }
+    @media (max-width: $tablet) {
+      max-width: 250px;
+      font-size: 34px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 28px;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  column-gap: 35px;
+  height: max-content;
+  padding: 120px 5%;
+  background-color: $bg-light-color;
+  @media (max-width: $tablet) {
+    padding: 50px 5%;
+  }
+  @media (max-width: $mobile) {
+    padding: 25px 5%;
+  }
+
+  &__photo {
+    flex-grow: 1;
+    min-width: 50%;
+    background-image: url("../images/main/grapefruit2.png");
+    @include background-photo-style;
+    background-size: contain;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    width: 50%;
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    @include subtitle-style;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    @include title-style;
+  }
+
+  &__description {
+    margin-bottom: 46px;
+    @include text-description-style;
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    @include button-style;
+    & {
+      color: $white-color;
+      background: $dark-color;
+    }
+  }
+}
+
+.about-cards {
+  &__item {
+    display: flex;
+    column-gap: 20px;
+    width: 80%;
+    margin-bottom: 30px;
+    @media (max-width: $mobile) {
+      width: 100%;
+      column-gap: 10px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    img {
+      @extend %max-width-height;
+    }
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    @include title-style;
+    & {
+      font-size: 25px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 21px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__description {
+    @include text-description-style;
+  }
+}
+
+.products {
+  width: 80%;
+  margin: 100px auto;
+  @media (max-width: $desktop-md) {
+    width: 90%;
+  }
+  @media (max-width: $tablet) {
+    margin: 50px auto;
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    text-align: center;
+    @include subtitle-style;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+    @include title-style;
+  }
+
+  &__button {
+    margin: 80px auto;
+    @include button-style;
+    & {
+      color: $white-color;
+      background: $dark-color;
+    }
+    @media (max-width: $tablet) {
+      margin: 50px auto;
+    }
+    @media (max-width: $tablet) {
+      margin: 30px auto;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  &__cards {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    transition: transform 0.5s easy;
+    @media (max-width: $desktop-md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__button {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/arrow.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    @include cursor-pointer;
+    &--prev {
+      rotate: 180deg;
+    }
+  }
+}
+
+.product {
+  @media (max-width: $desktop-md) {
+    width: 100%;
+  }
+}
+.testimonial {
+  padding: 40px;
+  background-color: $bg-light-grey;
+  background-image: url("../images/main/testimonials-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: $tablet) {
+    padding: 50px;
+  }
+  @media (max-width: 850px) and (min-width: $mobile) {
+    background-position: left;
+    padding: 50px 5% 50px 20%;
+  }
+
+  &__subtitle {
+    text-align: center;
+    @include subtitle-style;
+  }
+
+  &__title {
+    margin: 8px auto;
+    text-align: center;
+    @include title-style;
+    @media (max-width: $mobile) {
+      max-width: 400px;
+    }
+  }
+}
+
+.testimonial-carousel {
+  width: 70%;
+  margin: 40px auto;
+  @media (max-width: $tablet) {
+    width: 80%;
+    margin: 25px auto;
+  }
+  @media (max-width: 850px) {
+    width: 90%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__photo {
+    margin: 20px;
+    width: 115px;
+    height: 115px;
+    img {
+      @extend %max-width-height;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  &__text {
+    margin: 20px;
+    text-align: center;
+    @include text-description-style;
+  }
+
+  &__name {
+    @include basic-text-style;
+    & {
+      font-weight: 600;
+      font-size: 25px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__subtitle {
+    @include text-description-style;
+    & {
+      font-size: 15px;
+    }
+  }
+}
+
+.testimonial-achievements {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 40px;
+  border-top: 1px solid $border-color;
+  @media (max-width: $tablet) {
+    gap: 25px;
+  }
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 190px;
+    background-color: $light-grey;
+    border: 5px solid $white-color;
+    border-radius: 100%;
+    @media (max-width: $tablet) {
+      width: 140px;
+      height: 140px;
+    }
+    @media (max-width: 850px) {
+      height: max-content;
+      border: none;
+      border-radius: 0;
+      background-color: $bg-light-grey;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border: 5px solid $subtitle-color;
+      border-radius: 100%;
+      @media (max-width: 850px) {
+        border: none;
+        border-bottom: 3px solid $border-color;
+        border-radius: 0%;
+      }
+    }
+  }
+
+  &__title {
+    @include title-style;
+    @media (max-width: $tablet) {
+      font-size: 40px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 34px;
+    }
+  }
+
+  &__subtitle {
+    @include text-description-style;
+    & {
+      font-weight: 600;
+      color: $dark-color;
+    }
+  }
+}
+
+.eco-friendly {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    padding: 30px 0;
+    background-image: url("../images/main/eco-friendly-photo.jpg");
+    @include background-photo-style;
+  }
+
+  &__photo {
+    width: 50%;
+    min-height: 90vh;
+    background-image: url("../images/main/eco-friendly-photo.jpg");
+    @include background-photo-style;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: calc((90vh - height) / 2);
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 50px;
+    background-color: $white-color;
+    border-radius: 30px;
+    @media (max-width: $tablet) {
+      width: 60%;
+      padding: 35px;
+    }
+    @media (max-width: $mobile) {
+      position: static;
+      width: 80%;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    @include subtitle-style;
+  }
+
+  &__title {
+    @include title-style;
+  }
+
+  &__topic {
+    margin: 35px 0 7px;
+    @include caption-style;
+    @media (max-width: $tablet) {
+      margin: 20px 0;
+    }
+  }
+
+  &__text {
+    @include text-description-style;
+  }
+}
